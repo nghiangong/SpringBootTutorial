@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"> <!-- Đảm bảo sử dụng mã hóa UTF-8 -->
+    <title>Nghiangong To-do</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!--css-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <!--js-->
+    <script src="/js/bootstrap.js"></script>
+</head>
+<body>
+<h1 th:text="#{nghiangong.message.hello}"></h1>
+
+<a th:href="@{/listTodo}" th:text="#{nghiangong.value.viewListTodo}" class="btn btn-primary"></a>
+<a th:href="@{/addTodo}" th:text="#{nghiangong.value.addTodo}" class="btn btn-success"></a>
+</body>
+
+</html>

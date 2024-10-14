@@ -1,0 +1,34 @@
+# application.yml
+
+# Nhóm profile cho "local"
+spring:
+  profiles:
+    group:
+      local: common, local
+
+---
+# Nhóm profile cho "aws"
+spring:
+  profiles:
+    group:
+      aws: common, aws
+
+---
+# Cấu hình kích hoạt dựa trên profile
+spring:
+  config:
+    activate:
+      on-profile: aws
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  profiles:
+    active: aws # Profile mặc định
+
+
